@@ -1,0 +1,248 @@
+
+/* FOR REFERENCE 
+
+    Main Color: #230262
+    Main Font: 'Merriweather', Georgia, sans-serif;
+
+*/
+
+body {
+    background-color: #fbfbfb;
+    font-family: 'Merriweather', Georgia, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    height: 180px;
+    width: 100%;
+    clear: both;
+}
+
+header .line {
+    height: 6px;
+    width: 100%;
+    background-color: #230262;
+}
+
+header ul {
+    float: right;
+    margin: 76px 40px 0 40px;
+    list-style-type: none;
+}
+
+header ul a {
+    text-decoration: none;
+}
+
+header ul li {
+    display: inline;
+    margin: 30px;
+    padding: 10px;
+    color: #230262;
+    position: relative;
+    cursor: pointer;
+}
+
+header ul li:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0%;
+    background-color: #230262;
+    height: 2px;
+    transition: all 200ms ease-out;
+}
+
+header ul li:hover:after {
+    width: 100%;
+}
+
+header h1 {
+    font-weight: normal;
+    font-size: 28px;
+    margin: 14px 26px;
+    display: inline-block;
+    color: #230262;
+    letter-spacing: 1px;
+}
+
+.hero-img {
+    height: 600px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 60px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-image: url('img/hero.jpg');
+    box-shadow: inset 0px 0px 6px #222;
+}
+
+.hero-img h2 {
+    font-weight: normal;
+    color: #fdfdfd;
+    text-shadow: 0px 0px 10px #222;
+    text-align: center;
+    font-size: 56px;
+    letter-spacing: 1px;
+    line-height: 1.6;
+}
+
+.contact {
+    padding-top: 60px;
+    margin-bottom: 60px;
+}
+
+.contact h3 {
+    text-align: center;
+    font-size: 28px;
+    color: #230262;
+    font-weight: normal;
+    margin-bottom: 60px;
+}
+
+.contact-details {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+} 
+
+.contact-details div {
+    flex-basis: 33.333%;
+    text-align: center;
+}
+
+.contact-details div img {
+    width: 36%;
+    transition: all 200ms ease-out;
+}
+
+.contact-details div img:hover {
+    -webkit-filter: drop-shadow(0px 0px 2px #222);
+    filter: drop-shadow(0px 0px 2px #222);
+    transform: scale(1.05);
+}
+
+.contact-details div p {
+    color: #222;
+    font-size: 16px;
+    line-height: 1.6;
+    padding: 20px;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    word-break: break-all;
+    word-break: break-word;
+    hyphens: auto;
+}
+
+#map {
+    height: 500px;
+    width: 100%;
+    background-color: #ccc;
+    box-shadow: inset 0px 0px 6px #222
+}
+
+.information {
+    padding-top: 60px;
+    margin-bottom: 60px;
+}
+
+.information h3 {
+    font-size: 28px;
+    color: #230262;
+    font-weight: normal;
+    margin-bottom: 60px;
+    padding-left: 60px;
+    box-sizing: border-box;
+}
+
+.info-details {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.info-details div {
+    flex-basis: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.info-details img {
+    width: 60%;
+}
+
+.info-details p {
+    width: 60%;
+    color: #222;
+    font-size: 16px;
+    line-height: 1.6;
+    text-align: left; 
+    margin: 0 auto;
+}
+
+footer {
+    width: 100%;
+    height: 70px;
+    font-size: 12px;
+    color: #fdfdfd;
+    text-align: center;
+    line-height: 1.6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #230262;
+}
+
+@media (max-width: 900px){
+    header ul {
+        margin: 76px 0 0 0;
+    }
+    header ul li {
+        margin: 30px 10px;
+    }
+    .hero-img h2 {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 600px){
+    header h1 {
+        font-size: 20px;
+    }
+    header ul {
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+    header ul li {
+        margin: 10px auto;
+        display: block;
+        width: 70%;
+    }
+    .hero-img {
+        height: auto;
+        padding: 20px;
+    }
+    .hero-img h2 {
+        font-size: 20px;
+    }
+    .contact-details div {
+        flex-basis: 100%;
+    }
+    .information h3 {
+        padding-left: 0;
+        text-align: center;
+    }
+    .info-details div {
+        flex-basis: 100%;
+    }
+    .info-details p {
+        text-align: center;
+    }
+}

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        
+        <title>Summers Accountancy & Book-keeping Services</title>
+
+        <meta name="description" content="Providing the complete Accountancy, Taxation, Book-keeping and Payroll services for the small-large business/company">
+
+        <link rel="icon" href="img/icon.png" type="image/png">
+
+        <!--CSS-->
+        <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+        <link href="index.css" rel="stylesheet">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="line"></div>
+            <h1>
+                <b>S</b>ummers<br><b>A</b>ccountancy &<br><b>B</b>ook-keeping<br><b>S</b>ervices
+            </h1>
+            <ul>
+                <a href="#contact"><li>Contact Us</li></a>
+                <a href="#map"><li>Where We Are</li></a>
+                <a href="#information"><li>Information</li></a>
+            </ul>
+        </header>
+        <section class="hero-img">
+            <h2>
+                Providing the complete Accountancy, Taxation, Book-keeping and Payroll services for the small-large business/company
+            </h2>
+        </section>
+        <section class="contact" id="contact">
+            <h3>Get in touch</h3>
+            <div class="contact-details">
+                <div>
+                    <a href="mailto:rhian.golding@btinternet.com"><img src="img/emailicon.png"></a>
+                    <p>rhian.golding@btinternet.com</p>
+                </div>
+                <div>
+                    <a href="tel:01792812540"><img src="img/phoneicon.png"></a>
+                    <p>Tel/Fax:<br>01792 812540<br>Mobile:<br>(Robert) 07980 917166<br>(Rhian) 07739 755220</p>
+                </div>
+                <div>
+                    <a href="#map"><img src="img/houseicon.png"></a>
+                    <p>70 New Road, Skewen<br>Neath, West Glamorgan<br>SA10 6HA</p>
+                </div>
+            </div>
+        </section>
+        <section id="map">
+
+        </section>
+        <section id="information" class="information">
+            <h3>Information</h3>
+            <div class="info-details">
+                <div>
+                    <p>
+                        R.N. Lewis, F.C.A.<br>
+                        Chartered Accountant.<br>
+                        <br>
+                        V.A.T. Registration No:<br>810962440
+                    </p>
+                </div>
+                <div>
+                    <img src="img/icaew.png">
+                </div>
+            </div>
+        </section>
+        <footer>
+            Summers Accountancy<br>&copy; 2017
+        </footer>
+
+        <script>
+            function initMap() {
+                var office = {lat: 51.661100, lng: -3.844819};
+                var map = new google.maps.Map(document.getElementById('map'), {
+                    zoom: 15,
+                    center: office
+                });
+                var marker = new google.maps.Marker({
+                    position: office,
+                    map: map,
+                    icon: "img/mapicon.png"
+                });
+            }
+
+            $(document).ready(function(){
+                $("a").on('click', function(event) {
+                    if (this.hash !== "") {
+                        event.preventDefault();
+                        var hash = this.hash;
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 800, function(){
+                                window.location.hash = hash;
+                            });
+                    }
+                });
+            });
+
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLdB9dooB1dRXXf-USOKu7Mhw3tV25DIk&callback=initMap">
+        </script>
+    </body>
+</html>
